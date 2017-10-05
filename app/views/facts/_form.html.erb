@@ -1,6 +1,6 @@
 <%= form_with(model: fact, local: true) do |form| %>
   <% if fact.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="alert alert-danger">
       <h2><%= pluralize(fact.errors.count, "error") %> prohibited this fact from being saved:</h2>
 
       <ul>

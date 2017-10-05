@@ -15,6 +15,9 @@ class Fact < ApplicationRecord
     # Fact should not allow duplicates
     validates :fact, uniqueness: true
 
+    # Fact should contain Chuck Norris
+    validates_format_of :fact, :with => /Chuck Norris/i, :message => 'Fact should contain Chuck Norris'
+
     scope :random_fact, -> {
         # Set a random offset
         offset = rand(Fact.count)

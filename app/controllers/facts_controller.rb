@@ -26,6 +26,9 @@ class FactsController < ApplicationController
   def create
     @fact = Fact.new(fact_params)
 
+    # Strip fact of white spaces
+    @fact.fact.strip!
+
     respond_to do |format|
       if @fact.save
         format.html { redirect_to @fact, notice: 'Fact was successfully created.' }
@@ -43,6 +46,14 @@ class FactsController < ApplicationController
     respond_to do |format|
       if is_voting?
 
+        # Add 1 vote to the fact
+        vote = Vote.new
+        vote.fact = @fact
+        vote.save
+
+        # Redirect to the Facts home page
+        format.html { redirect_to facts_url }
+        
       elsif @fact.update(fact_params)
         format.html { redirect_to @fact, notice: 'Fact was successfully updated.' }
         format.json { render :show, status: :ok, location: @fact }
@@ -71,7 +82,7 @@ class FactsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def fact_params
-      params.require(:fact).permit(:joke, :votes)
+      params.require(:fact).permit(:fact, :image)
     end
 
     def is_voting?

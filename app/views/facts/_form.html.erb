@@ -12,8 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :joke %>
-    <%= form.text_field :joke, id: :fact_joke %>
+    <%= form.label :fact %>
+    <%= form.text_field :fact, id: :fact_fact %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image, id: :fact_image %>
   </div>
 
   <div class="actions">

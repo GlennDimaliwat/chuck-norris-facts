@@ -36,6 +36,12 @@ gem 'jbuilder', '~> 2.5'
 # Use bootstrap
 gem 'bootstrap', '~> 4.0.0.beta'
 
+# Shrine
+gem 'shrine'
+gem 'image_processing'
+gem 'mini_magick'
+gem 'fastimage'
+
 group :development, :test do
 
   # Use RSPEC

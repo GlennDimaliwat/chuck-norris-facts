@@ -122,27 +122,27 @@ form {
 
     div.actions {
         text-align: center;
-
-        input:focus {
-            outline:0;
-        }
-        input[type=submit] {
-            position: relative;
-            height: 30px;
-            margin-top: 5px;
-            border: 1px solid #89cff0;
-            font-weight: normal;
-            font-size: 16px;
-            background-color: white;
-            cursor: pointer;
-            transition: .5s all;
-
-            &:hover {
-                background-color: #89cff0;
-                color: white;
-            }
-        }
-
         padding-bottom: 70px;
+        
+        // input:focus {
+        //     outline:0;
+        // }
+        // input[type=submit] {
+        //     position: relative;
+        //     height: 30px;
+        //     margin-top: 5px;
+        //     border: 1px solid #89cff0;
+        //     font-weight: normal;
+        //     font-size: 16px;
+        //     background-color: white;
+        //     cursor: pointer;
+        //     transition: .5s all;
+
+        //     &:hover {
+        //         background-color: #89cff0;
+        //         color: white;
+        //     }
+        // }
+
     }
 }

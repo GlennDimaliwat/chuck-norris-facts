@@ -22,3 +22,11 @@
 ### Vote
 - id - integer
 - fact_id - Fact
+
+
+## Features
+- Create/Edit/Delete Chuck Norris Facts (with Shrine photo upload)
+- View all Chuck Norris Facts
+- Vote for a Chuck Norris Fact
+- Show a Random Chuck Norris Fact
+- View Top 10 Voted Chuck Norris Facts

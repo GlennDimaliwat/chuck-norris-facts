@@ -1,24 +1,23 @@
-# README
+# Chuck Norris Facts
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Challenge
+- Work in pairs
+- Choose something you can collect that you like
+- Create ERDs for the models (model names and attributes)
+- Create a new Rails app
+- Add Rspec and Bootstrap
+- Create the model with spec and validations
+- Use Bootstrap to style the app
 
-Things you may want to cover:
+## ERD
+![erd database](/docs/images/erd.png)
 
-* Ruby version
 
-* System dependencies
+## Model
+### Fact
+- id - integer
+- joke - string
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Vote
+- id - integer
+- fact_id - Fact

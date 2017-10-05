@@ -16,7 +16,8 @@
 ## Model
 ### Fact
 - id - integer
-- joke - string
+- fact - text
+- image_data - string
 
 ### Vote
 - id - integer

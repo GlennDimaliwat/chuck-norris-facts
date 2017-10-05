@@ -3,9 +3,59 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-    background-color: dodgerblue;
+    background-color: #89cff0;
 }
 
 div.container {
-    background-color: white;
+    background-color: #FFF;
 }
+
+nav.primary-nav {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    // text-align: center;
+    // margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+div.card {
+    padding-bottom: 20px;
+    min-height: 440px;
+
+    div.photo {
+        min-height: 200px;
+        max-height: 200px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    h4.card-title {
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    p.card-text {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    div.votes {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+
+    div.card-nav {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+

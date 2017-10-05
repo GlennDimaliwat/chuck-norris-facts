@@ -15,8 +15,15 @@ class Fact < ApplicationRecord
     # Fact should not allow duplicates
     validates :fact, uniqueness: true
 
+    scope :random_fact, -> {
+        # Set a random offset
+        offset = rand(Fact.count)
+
+        # Get the random Fact
+        @fact = Fact.offset(offset).first
+    }
+
     scope :top10, ->{
-        # select("songs.id, songs.name, artist_id, count(play_counts.id) AS play_count").
         joins(:vote).
         group("facts.id").
         order("count(votes.id) DESC").

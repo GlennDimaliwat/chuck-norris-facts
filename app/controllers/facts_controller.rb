@@ -11,11 +11,12 @@ class FactsController < ApplicationController
   # GET /facts/1.json
   def show
     if params[:id]=="random"
-      # Set a random offset
-      offset = rand(Fact.count)
+      # # Set a random offset
+      # offset = rand(Fact.count)
       
-      # Get the random Fact
-      @fact = Fact.offset(offset).first
+      # # Get the random Fact
+      # @fact = Fact.offset(offset).first
+      @fact = Fact.random_fact
     else
       redirect_to facts_url
     end

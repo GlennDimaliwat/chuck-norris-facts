@@ -1,5 +1,5 @@
 class FactsController < ApplicationController
-  before_action :set_fact, only: [:show, :edit, :update, :destroy]
+  before_action :set_fact, only: [:edit, :update, :destroy]
 
   # GET /facts
   # GET /facts.json
@@ -10,6 +10,20 @@ class FactsController < ApplicationController
   # GET /facts/1
   # GET /facts/1.json
   def show
+    if params[:id]=="random"
+      # Set a random offset
+      offset = rand(Fact.count)
+      
+      # Get the random Fact
+      @fact = Fact.offset(offset).first
+    else
+      redirect_to facts_url
+    end
+  end
+
+  # Custom Action for Top 10 Facts
+  def top_10
+    @facts = Fact.top10
   end
 
   # GET /facts/new

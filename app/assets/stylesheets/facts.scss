@@ -23,13 +23,33 @@ h1 {
     text-align: center;
 }
 
+div.random-fact {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 70px;
+}
+
+div.top-facts {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 70px;
+
+    div.back-to-top {
+        width: 100%;
+        padding-top: 20px;
+        text-align: center;
+    }
+}
+
 div.card {
     padding-bottom: 20px;
     min-height: 440px;
 
     div.photo {
         min-height: 200px;
-        max-height: 200px;
+        // max-height: 200px;
         width: 100%;
         overflow: hidden;
     }
@@ -57,5 +77,72 @@ div.card {
     }
 }
 
+form {
+    position: relative;
+    width: 100%;
+    margin-top: 25px;
+    text-align: left;
 
+    div.field {
+        position: relative;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        input[type=file] {
+            width: 100%;
+            height: 45px;
+            padding: 12px; 
+            // border: 1px solid gray;
+            // border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+            font-size: 16px;
+            color: black;
+        }
+    
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 12px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: black;
+        }
+    
+        input[type=text]:focus, textarea:focus {
+            box-shadow: 0 0 5px black;
+            border: 1px solid black;
+        }
+    }
 
+    div.actions {
+        text-align: center;
+
+        input:focus {
+            outline:0;
+        }
+        input[type=submit] {
+            position: relative;
+            height: 30px;
+            margin-top: 5px;
+            border: 1px solid #89cff0;
+            font-weight: normal;
+            font-size: 16px;
+            background-color: white;
+            cursor: pointer;
+            transition: .5s all;
+
+            &:hover {
+                background-color: #89cff0;
+                color: white;
+            }
+        }
+
+        padding-bottom: 70px;
+    }
+}

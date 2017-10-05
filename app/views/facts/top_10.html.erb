@@ -1,0 +1,26 @@
+
+
+<div class="top-facts">
+    <% @facts.each_with_index do |fact, index| %>
+    <div class="card">
+        <div class="photo">
+            <%= image_tag fact.image.url,  class:"card-img-top" %>
+            </div>
+            <div class="card-block">
+            <h4 class="card-title">Rank <%= index + 1 %> (<%= fact.vote.count %> Votes)</h4>
+            <p class="card-text">
+                <%= fact.fact %>
+            </p>
+            <!-- Vote button -->
+            <%= form_with model: fact, method: :patch do |f| %>
+            <%= f.hidden_field :vote %>
+            <% end %>
+        </div>
+    </div>
+    <% end %>
+
+    <div class="back-to-top">
+        <a href="#">Back to Top</a>
+    </div>
+</div>
+

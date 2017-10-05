@@ -46,4 +46,11 @@ RSpec.describe Fact, type: :model do
     expect(post4).to be_invalid
   end
 
+  it "should mention 'Chuck Norris'" do
+    expect(Fact.new(fact: "Chuck Norris doesn't sleep. He waits.").fact).to match(/Chuck Norris/i)
+    expect(Fact.new(fact: "chuck Norris doesn't sleep. He waits.").fact).to match(/Chuck Norris/i)
+    expect(Fact.new(fact: "Chuck norris doesn't sleep. He waits.").fact).to match(/Chuck Norris/i)
+    expect(Fact.new(fact: "chuck norris doesn't sleep. He waits.").fact).to match(/Chuck Norris/i)
+  end
+
 end
